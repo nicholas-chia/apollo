@@ -1,0 +1,15 @@
+---
+-   hosts: test_group
+    remote_user: ec2-user
+    become: true
+    
+    tasks:
+    
+      - name: Check icmp state
+        command: cat /proc/sys/net/ipv4/icmp_echo_ignore_all
+        register: icmp_state
+        ignore_errors: yes
+        
+      - name: Disable icmp if found enabled
+        command: sysctl -w net.ipv4.icmp_echo_ignore_all=1
+        when: icmp_state.stdout == "0"
