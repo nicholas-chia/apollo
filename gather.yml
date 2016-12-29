@@ -1,9 +1,0 @@
----
--   hosts: test_group
-    remote_user: ec2-user
-    become: true
-    
-    tasks:
-    
-    - name: Show how debug works
-      debug: msg={{ ansible_distribution }}
