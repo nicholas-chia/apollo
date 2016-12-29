@@ -1,2 +1,4 @@
 [test_group]
 54.254.194.63
+
+[icmp_enabled_hosts]

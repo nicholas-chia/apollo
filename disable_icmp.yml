@@ -1,5 +1,5 @@
 ---
--   hosts: test_group
+-   hosts: tag_ansible_group
     remote_user: ec2-user
     become: true
     

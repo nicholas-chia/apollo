@@ -1,5 +1,5 @@
 ---
--   hosts: test_group
+-   hosts: tag_ansible_group
     remote_user: ec2-user
     become: true
     
@@ -18,4 +18,9 @@
         debug: msg="icmp is disabled"
         when: icmp_state.stdout == "1"
         
+# create new file if does not exist, use block in file
+
+# add a line to a file if it doe not exist wo regexp, use lineinfile
+
+
 
